@@ -1,15 +1,60 @@
 <?php
 
 // Inicializar bot con el token
-$bottoken = "456501628:AAFfwibamNRz29xANcXAGrNPwvf70kEtAU0" ;
+/*$bottoken = "456501628:AAFfwibamNRz29xANcXAGrNPwvf70kEtAU0" ;
 
-$website = "https://api.telegram.org/bot".$bottoken;
+$website = 'https://api.telegram.org/bot'.$bottoken;
 
-$update = file_get_contents("php://input");
+$update = file_get_contents('php://input');
 
 $updateArray = json_decode($update, TRUE);
 
-$chatId = $updateArray["message"]["chat"]["id"];
+$chatId = -286862611;
 
-file_get_contents($website."/sendmessage?chat_id=".$chatId."&text=test");
+file_get_contents($response);*/
 
+//$updateArray["message"]["chat"]["id"]
+
+$bottoken = "456501628:AAFfwibamNRz29xANcXAGrNPwvf70kEtAU0";
+
+$website = 'https://api.telegram.org/bot'.$bottoken;
+
+$update = file_get_contents('php://input');
+
+$update = json_decode($update, TRUE);
+
+$chatId = $update["message"]["chat"]["id"];
+
+$message = $update["message"]["text"];
+
+/*$telegramusername = $update["message"]["from"]["username"];
+
+$messageId = $update["message"]["message_id"];
+
+$messageName = $update["message"]["chat"]["first_name"];*/
+
+switch ($message) {
+	
+	case "Hola"||"hola";
+	
+	funcSaludo($chatId);
+	
+	break;
+	
+}
+
+function funcSaludo($chatId) {
+	
+	echo "Hola, quieres tema? hehehehe";
+	
+	sendMessage($chatId, $message);
+	
+}
+
+function sendMessage($chatId, $message) {
+
+	$url = "$GLOBALS[website]/sendMessage?chat_id=$chatId&text=$message";
+	
+	file_get_contents($url);
+
+}
