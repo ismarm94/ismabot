@@ -6,11 +6,11 @@ include('TelegramBot/Api/InvalidArgumentException.php');
 include('TelegramBot/Api/BaseType.php');
 
 // Inicializar bot con el token
-define(TOKEN, '456501628:AAFfwibamNRz29xANcXAGrNPwvf70kEtAU0');
+define(TOKEN, '');
 $bot = new \TelegramBot\Api\BotApi(TOKEN);
 
 // Activar Webhook
-define(URL_BOT, 'https://localhost/cliente/ismabot/mainbot.php');
+define(URL_BOT, '');
 $result = $bot->setWebhook(URL_BOT);
 
 if ($result)
