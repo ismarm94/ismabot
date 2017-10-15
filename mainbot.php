@@ -1,7 +1,7 @@
 <?php
 
 // Inicializar bot con el token
-/*$bottoken = "456501628:AAFfwibamNRz29xANcXAGrNPwvf70kEtAU0" ;
+/*$bottoken = "" ;
 
 $website = 'https://api.telegram.org/bot'.$bottoken;
 
@@ -9,13 +9,13 @@ $update = file_get_contents('php://input');
 
 $updateArray = json_decode($update, TRUE);
 
-$chatId = -286862611;
+$chatId = -;
 
 file_get_contents($response);*/
 
 //$updateArray["message"]["chat"]["id"]
 
-$bottoken = "456501628:AAFfwibamNRz29xANcXAGrNPwvf70kEtAU0";
+$bottoken = "";
 
 $website = 'https://api.telegram.org/bot'.$bottoken;
 
