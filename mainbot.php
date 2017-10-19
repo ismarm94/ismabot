@@ -32,6 +32,11 @@ switch ($message) {
 	
 	break;
 	
+	case "/github";
+	
+    funcGit($chatId);
+	
+	break;
 }
 
 /*if ($message == Hola) {
@@ -60,6 +65,14 @@ function funcSaludo($chatId) {
 	
 	sendMessage($chatId, $message1);
 	
+}
+
+function funcGit($chatId) {
+    
+   $message4 = "https://github.com/ismarm94/ismabot";
+   
+   sendMessage($chatId, $message4);
+    
 }
 
 function opinaLuis($chatId){
