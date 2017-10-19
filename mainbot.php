@@ -1,20 +1,5 @@
 <?php
 
-// Inicializar bot con el token
-/*$bottoken = "" ;
-
-$website = 'https://api.telegram.org/bot'.$bottoken;
-
-$update = file_get_contents('php://input');
-
-$updateArray = json_decode($update, TRUE);
-
-$chatId = -;
-
-file_get_contents($response);*/
-
-//$updateArray["message"]["chat"]["id"]
-
 $bottoken = "";
 
 $website = 'https://api.telegram.org/bot'.$bottoken;
@@ -27,28 +12,62 @@ $chatId = $update["message"]["chat"]["id"];
 
 $message = $update["message"]["text"];
 
-/*$telegramusername = $update["message"]["from"]["username"];
+$telegramusername = $update["message"]["from"]["username"];
 
 $messageId = $update["message"]["message_id"];
 
-$messageName = $update["message"]["chat"]["first_name"];*/
+$messageName = $update["message"]["chat"]["first_name"];
 
 switch ($message) {
 	
-	case "Hola"||"hola";
+	case "Hola";
 	
 	funcSaludo($chatId);
 	
 	break;
 	
+	case "Quién es tu creador?";
+	
+	funcCreator($chatId);
+	
+	break;
+	
+}
+
+/*if ($message == Hola) {
+    
+    funcSaludo($chatId);
+    
+}*/
+
+if ($message == "Qué opinas de luis?") {
+    
+    opinaLuis($chatId);
+    
+}
+
+function funcCreator($chatId) {
+    
+    $message3 = "Mi creador es @Issma94! \xF0\x9F\x98\x8A";
+    
+    sendMessage($chatId, $message3);
+    
 }
 
 function funcSaludo($chatId) {
 	
-	echo "Hola, quieres tema? hehehehe";
+	 $message1 = "Hola, quieres tema? hehehehe";
 	
-	sendMessage($chatId, $message);
+	sendMessage($chatId, $message1);
 	
+}
+
+function opinaLuis($chatId){
+    
+    $message2 = "Que es un puto gay";
+    
+    sendMessage($chatId, $message2);
+    
 }
 
 function sendMessage($chatId, $message) {
@@ -58,3 +77,5 @@ function sendMessage($chatId, $message) {
 	file_get_contents($url);
 
 }
+
+?>
