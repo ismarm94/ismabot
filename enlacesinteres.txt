@@ -1,3 +1,5 @@
 Tabla unicode de emojis: https://apps.timwhitlock.info/emoji/tables/unicode
 
 Ejemplos de bots hechos en distintos lenguajes de programación: https://core.telegram.org/bots/samples
+
+API telegram bot: https://core.telegram.org/bots/api
