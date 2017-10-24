@@ -1,0 +1,2 @@
+{"update_id":959621286,
+"message":{"message_id":2906,"from":{"id":470334103,"is_bot":false,"first_name":"Luis Miguel","username":"lewis17","language_code":"es-ES"},"chat":{"id":-286852611,"title":"Ismabot Project","type":"group","all_members_are_administrators":false},"date":1508872587,"text":"Apuesto al 0"}}
