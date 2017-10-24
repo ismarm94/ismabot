@@ -1,0 +1,36 @@
+# Changelog
+
+Toda función nueva añadida o modificada quedará reflejada en este documento, con fecha de dicho cambio.
+
+9/10/17
+
+-Creación del contenedor del bot, donde se hallará todo el código (usando @botfather en telegram).
+-Creación de las clases necesarias para distribuir el código.
+-Creación y preparación del entorno en el que funcionará el bot (grupos/chat privado).
+
+11/10/17
+
+-Implementación del bot en un grupo de testeo (simulando uno real), dotándolo de permisos necesarios para su correcto funcionamiento (el bot debe ser administrador del grupo para poder leer los mensajes).
+-Realización de pruebas de conectividad bot -> API -> Cliente telegram (chat o grupo), mediante peticiones HTTPS manuales, la comprobación se basa en el envío de un mensaje mediante dicha petición.
+
+
+13/10/17
+
+-Primera inserción de código (responde a un saludo).
+-Ubicar el código del bot en un hosting, para tenerlo en funcionamiento siempre.
+-Estableciendo el Webhook, imprescindible para que el bot funcione de forma autónoma, véase: https://core.telegram.org/bots/api#setwebhook
+-Realización de comprobaciones, para verificar que los puntos anteriores han sido resueltos.
+
+17/10/17
+
+-Implementando nuevas funciones para responder a más mensajes recibidos (hay que resolver la problemática de las mayúsculas/minúsculas y tildes.
+-Comprobación de dichas funciones.
+
+20/10/17
+
+-Implementación de una nueva función que resuelve la problemática de las mayúsculas/minúsuclas/tildes, ahora el bot responde al mensaje independientemente de cómo esté escrito dicho mensaje.
+
+23/10/17
+
+-Añadiendo nuevo código para el juego de la ruleta (no funcional aún, en pruebas).
+-Juego de la ruleta ya funcional de forma parcial (sólo responde al mensaje "apuesto al rojo/negro").
