@@ -34,3 +34,9 @@ Toda función nueva añadida o modificada quedará reflejada en este documento, 
 
 -Añadiendo nuevo código para el juego de la ruleta (no funcional aún, en pruebas).
 -Juego de la ruleta ya funcional de forma parcial (sólo responde al mensaje "apuesto al rojo/negro").
+
+24/10/17
+
+-Juego de la ruelta completamente funcional (a la espera de añadir la funcionalidad de fichas -> usuario)(WIP).
+-Se ha añadido un comando ping para comprobar que el bot conecta y nos responde.
+-Se ha editado el mensaje de respuesta al saludo de un usuario, ahora le contestará haciendo mención a su nombre de usuario en Telegram.
