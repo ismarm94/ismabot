@@ -46,3 +46,4 @@ Toda función nueva añadida o modificada quedará reflejada en este documento, 
 -Modificada la clase que trata el texto introducido por el usuario, ignora los signos de exclamación ahora.
 -Modificada la función de saludo, se corrige el problema en el que si un usuario no dispone de alias,
 en el mensaje de saludo devuelve un dato vacío, ahora devuelve el nombre del usuario si éste no dispone de alias.
+-Se ha añadido saludos extra (buenos días, buenas tardes y buenas noches).
