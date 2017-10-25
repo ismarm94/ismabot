@@ -40,3 +40,9 @@ Toda función nueva añadida o modificada quedará reflejada en este documento, 
 -Juego de la ruelta completamente funcional (a la espera de añadir la funcionalidad de fichas -> usuario)(WIP).
 -Se ha añadido un comando ping para comprobar que el bot conecta y nos responde.
 -Se ha editado el mensaje de respuesta al saludo de un usuario, ahora le contestará haciendo mención a su nombre de usuario en Telegram.
+
+25/10/17
+
+-Modificada la clase que trata el texto introducido por el usuario, ignora los signos de exclamación ahora.
+-Modificada la función de saludo, se corrige el problema en el que si un usuario no dispone de alias,
+en el mensaje de saludo devuelve un dato vacío, ahora devuelve el nombre del usuario si éste no dispone de alias.
