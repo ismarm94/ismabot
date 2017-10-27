@@ -47,3 +47,9 @@ Toda función nueva añadida o modificada quedará reflejada en este documento, 
 -Modificada la función de saludo, se corrige el problema en el que si un usuario no dispone de alias,
 en el mensaje de saludo devuelve un dato vacío, ahora devuelve el nombre del usuario si éste no dispone de alias.
 -Se ha añadido saludos extra (buenos días, buenas tardes y buenas noches).
+
+27/10/17
+
+-Añadidos más supuestos de saludo, a parte de "hola", también responde a saludos como... buenas, Hi, hello, etc...
+-Ahora responderá en qué grupo estás preguntando "donde estoy?.
+-Sistema de fichas implementado y funcional para el juego de la ruleta, a la espera de resolver algunos errores.
