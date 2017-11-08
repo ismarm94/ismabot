@@ -53,3 +53,12 @@ en el mensaje de saludo devuelve un dato vacío, ahora devuelve el nombre del us
 -Añadidos más supuestos de saludo, a parte de "hola", también responde a saludos como... buenas, Hi, hello, etc...
 -Ahora responderá en qué grupo estás preguntando "donde estoy?.
 -Sistema de fichas implementado y funcional para el juego de la ruleta, a la espera de resolver algunos errores.
+
+8/11/2017
+
+-Mejorado el mensaje de ubicación en el grupo ("donde estoy?").
+-También, mediante el comando /fecha, te dirá la fecha en la que estamos.
+-Juego de la ruleta completo, con sistema de fichas funcional 100%.
+-Resolución de errores menores.
+
+De momento, no se espera añadir más características al bot (versión para proyecto).
