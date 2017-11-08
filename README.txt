@@ -7,6 +7,7 @@ Comandos:
 - /github: Envía un mensaje en el chat/grupo con el enlace al github donde se encuentra el código del bot.
 - /ping: Comprobación básica y sencilla para ver que el bot responde a una llamada.
 - /apuesto: Sirve para ver la sintaxis del comando necesario para el juego de la ruleta
+- /fecha: Muestra la fecha actual
 
 Juegos:
 
