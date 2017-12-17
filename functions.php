@@ -10,13 +10,13 @@
     
         if (isset($userName)) {
 
-	        $message1 = "Hola!, @".$userName. " ¿Qué tal? \xF0\x9F\x98\x8A";
+	        $message1 = "Â¡Hola!, @".$userName. " Â¿QuÃ© tal? \xF0\x9F\x98\x8A";
 	
 	            sendMessage($chatId, $message1);
 
             } else {
     
-    	        $message1 = "Hola!, ".$basicName. " ¿Qué tal? \xF0\x9F\x98\x8A";
+    	        $message1 = "Hola!, ".$basicName. " Â¿QuÃ© tal? \xF0\x9F\x98\x8A";
 	
 	                sendMessage($chatId, $message1);
     
@@ -28,13 +28,13 @@
     
         if (isset($userName)) {
 
-	        $messageDay = "Buenos días! :D @".$userName;
+	        $messageDay = "Buenos dÃ­as! :D @".$userName;
 	
 	            sendMessage($chatId, $messageDay);
 
         } else {
     
-    	    $messageDay = "Buenos días! :D, ".$basicName;
+    	    $messageDay = "Buenos dÃ­as! :D, ".$basicName;
 	
 	            sendMessage($chatId, $messageDay);
     
@@ -85,6 +85,14 @@
             sendMessage($chatId, $message2);
     
     }
+    
+    function respUsr($chatId, $messageId) {
+        
+            $messageResp1 = "Hasta luego!";
+            
+            replyMessage($chatId, $messageResp1, $messageId);
+        
+    }
 
     function funcCreator($chatId) {
     
@@ -108,7 +116,7 @@
             
             $nombre = rtrim($chatName, "_");
     
-            $message5 = "Estás en: \n\xE2\x96\xB6 ".$nombre."\n\xF0\x9F\x86\x94 ".$chatId;
+            $message5 = "EstÃ¡s en: \n\xE2\x96\xB6 ".$nombre."\n\xF0\x9F\x86\x94 ".$chatId;
     
             $message5encoded = urlencode ( $message5 );
    
@@ -116,7 +124,7 @@
     
         } else {
         
-        $message5err = "No estás en un grupo!";
+        $message5err = "No estÃ¡s en un grupo!";
         
             sendMessage($chatId, $message5err);
         
@@ -138,6 +146,14 @@
 	
 	        file_get_contents($url);
     
+    }
+    
+    function replyMessage($chatId, $message, $messageId) {
+
+	   $url = "$GLOBALS[website]/sendMessage?chat_id=$chatId&text=$message&reply_to_message_id=$messageId";
+	
+	       file_get_contents($url);
+
     }
 
 
@@ -192,7 +208,7 @@
             
            if (isset($userName)) {
             
-                $message3 = "Has acertado! ".$aleatorio." \xF0\x9F\x94\xB4 , @".$userName." ganó: ".($cantidad*2)." fichas.";
+                $message3 = "Has acertado! ".$aleatorio." \xF0\x9F\x94\xB4 , @".$userName." ganÃ³: ".($cantidad*2)." fichas.";
             
             //Es una variable global para saber si el usuario ha acertado o no (1->si,0->no)
             
@@ -202,7 +218,7 @@
             
             else {
                 
-                $message3 = "Has acertado! ".$aleatorio." \xF0\x9F\x94\xB4 , ".$basicName." ganó: ".($cantidad*2)." fichas.";
+                $message3 = "Has acertado! ".$aleatorio." \xF0\x9F\x94\xB4 , ".$basicName." ganÃ³: ".($cantidad*2)." fichas.";
             
                 $fichas = 1;
             
@@ -212,7 +228,7 @@
             
              if (isset($userName)) {
 
-                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , @".$userName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , @".$userName." perdiÃ³: ".$cantidad." fichas.";
             
                 $fichas = 0;
             
@@ -220,7 +236,7 @@
              
              else {
                  
-                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , ".$basicName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , ".$basicName." perdiÃ³: ".$cantidad." fichas.";
             
                 $fichas = 0;
                  
@@ -230,13 +246,13 @@
             
             if (isset($userName)) {
 
-                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , @".$userName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB5 , @".$userName." perdiÃ³: ".$cantidad." fichas.";
             
                 $fichas = 0;
             
             } else {
                 
-                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , ".$basicName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB5 , ".$basicName." perdiÃ³: ".$cantidad." fichas.";
             
                 $fichas = 0;
             
@@ -246,7 +262,7 @@
         
 	        break;
 	        
-	        //si el mensaje contiene /apuesto al principio y rojo al final ejecuta la funcion, es para evitar que se introduzca cualquier otra cosa
+	        //si el mensaje contiene /apuesto al principio y cero al final ejecuta la funcion, es para evitar que se introduzca cualquier otra cosa
 	        
 	     case strpos(limpiaTexto($message), "/apuesto") !== FALSE && strpos(limpiaTexto($message), "negro") !== FALSE:
 	         
@@ -256,13 +272,13 @@
             
             if (isset($userName)) {
             
-                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB4 , @".$userName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB4 , @".$userName." perdiÃ³: ".$cantidad." fichas.";
                 
                 $fichas = 0;
                 
             } else {
                 
-                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB4 , ".$basicName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB4 , ".$basicName." perdiÃ³: ".$cantidad." fichas.";
             
                 $fichas = 0;
             
@@ -272,13 +288,13 @@
             
             if (isset($userName)) {
             
-                $message3 = "Has acertado! ".$aleatorio." \xE2\x9A\xAB , @".$userName." ganó: ".($cantidad*2)." fichas.";
+                $message3 = "Has acertado! ".$aleatorio." \xE2\x9A\xAB , @".$userName." ganÃ³: ".($cantidad*2)." fichas.";
             
                 $fichas = 1;
                 
             } else {
                 
-                $message3 = "Has acertado! ".$aleatorio." \xE2\x9A\xAB , ".$basicName." ganó: ".($cantidad*2)." fichas.";
+                $message3 = "Has acertado! ".$aleatorio." \xE2\x9A\xAB , ".$basicName." ganÃ³: ".($cantidad*2)." fichas.";
             
                 $fichas = 1;
             
@@ -288,12 +304,12 @@
             
             if (isset($userName)) {
             
-                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , @".$userName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB5 , @".$userName." perdiÃ³: ".$cantidad." fichas.";
                 
                 $fichas = 0;
             } else {
                 
-                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , ".$basicName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB5 , ".$basicName." perdiÃ³: ".$cantidad." fichas.";
                 
                 $fichas = 0;
                 
@@ -302,7 +318,7 @@
         }
 	        break;
 	        
-	        //si el mensaje contiene /apuesto al principio y rojo al final ejecuta la funcion, es para evitar que se introduzca cualquier otra cosa
+	        //si el mensaje contiene /apuesto al principio y cero al final ejecuta la funcion, es para evitar que se introduzca cualquier otra cosa
 	        
 	     case strpos(limpiaTexto($message),"/apuesto")!==FALSE && strpos(limpiaTexto($message),"cero")!==FALSE:
 	         
@@ -312,13 +328,13 @@
             
             if (isset($userName)) {
             
-                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB4 , @".$userName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio."   \xF0\x9F\x94\xB4 , @".$userName." perdiÃ³: ".$cantidad." fichas.";
                 
                 $fichas = 0;
             }
             else{
                 
-                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB4 , ".$basicName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xF0\x9F\x94\xB4 , ".$basicName." perdiÃ³: ".$cantidad." fichas.";
                 
                 $fichas = 0;   
             }
@@ -327,13 +343,13 @@
             
             if (isset($userName)) {
          
-                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , @".$userName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , @".$userName." perdiÃ³: ".$cantidad." fichas.";
             
                 $fichas = 0;
             
             } else {
                 
-                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , ".$basicName." perdió: ".$cantidad." fichas.";
+                $message3 = "Fallaste! ".$aleatorio." \xE2\x9A\xAB , ".$basicName." perdiÃ³: ".$cantidad." fichas.";
                 
                 $fichas = 0; 
                 
@@ -345,7 +361,7 @@
                 
                 $cantidad = $cantidad*37;
                 
-                $message3 = "Has acertado! ".$aleatorio." \xE2\x9A\xAB , @".$userName." ganó: ".$cantidad." fichas.";
+                $message3 = "Has acertado! ".$aleatorio." \xF0\x9F\x94\xB5 , @".$userName." ganÃ³: ".$cantidad." fichas.";
                 
                 $fichas = 1;
             
@@ -353,7 +369,7 @@
                 
                 $cantidad = $cantidad*37;
                 
-                $message3 = "Has acertado! ".$aleatorio." \xE2\x9A\xAB , ".$basicName." ganó: ".$cantidad." fichas.";
+                $message3 = "Has acertado! ".$aleatorio." \xF0\x9F\x94\xB5 , ".$basicName." ganÃ³Â³: ".$cantidad." fichas.";
                 
                 $fichas = 1;   
             
@@ -406,7 +422,7 @@
                 
                 }
                 
-            //si el usuario no existe, se le añade a la tabla y se le añaden fichas, despues se le dan las fichas ganadas
+            //si el usuario no existe, se le aÃ±ade a la tabla y se le aÃ±aden fichas, despues se le dan las fichas ganadas
             
             else {
                 
@@ -458,7 +474,7 @@
                 
                 } else {
                     
-                //si el usuario no existe, se le añade a la tabla y se le añaden fichas, despues se le quitan las fichas apostadas
+                //si el usuario no existe, se le aÃ±Â±ade a la tabla y se le aÃ±aden fichas, despues se le quitan las fichas apostadas
                 
                  $sql = "INSERT INTO `Identificacion`(`id`, `fichas`) VALUES (".$userId.",600)";
 
@@ -558,19 +574,10 @@
     
     $numberRand = rand ( 1 , 3 );
     
-    //$arrimages = array("https://proyectoismabot.000webhostapp.com/multimedia/coche.jpg", "https://proyectoismabot.000webhostapp.com/multimedia/paisaje.jpg", "https://proyectoismabot.000webhostapp.com/multimedia/parque.png");
-    
-    //$img = arrimages[1];
-    
-    //$img = array_slice($arrimages, $numberRand);
-    
     $img = array("https://media.giphy.com/media/7xkxbhryQO7hm/giphy.gif","https://media.giphy.com/media/OQkOBxMNv0bqU/giphy.gif","https://thumbs.gfycat.com/KindlyExaltedBellsnake-max-1mb.gif");
     
     $url = "$GLOBALS[website]/sendDocument?chat_id=$chatId&document=$img[$numberRand]";
-    
-    //sendMessage($chatId,$numberRand);
    
-	
 	    file_get_contents($url);
     
  }
