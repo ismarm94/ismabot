@@ -7,6 +7,8 @@
     include 'varlist.php';
     
     include 'basedatos.php';
+    
+
 
 //obtenemos la ultima palabra cuando el usuario apuesta, para comprobar que el comando no tiene errores de sintaxis
 
@@ -69,6 +71,12 @@
 	        msgPing($chatId);
 	    
 	    break;
+	    
+	    case limpiaTexto("/getid");
+	    
+	        getId($chatId, $messageFowardedId, $messageFowardedFn, $messageFowardedAlias);
+	        
+	    break;
 	
 	    case limpiaTexto("donde estoy?");
 	
@@ -94,13 +102,13 @@
 	    
 	                if (isset($userName)) {
 	                    
-	                    sendMessage($chatId,"Hola @".$userName.", veo que eres nuevo, se te han aÃ±adido: 600 fichas.");
+	                    sendMessage($chatId,"Hola @".$userName.", veo que eres nuevo, se te han añadido: 600 fichas.");
 	                    
 	               }  
 	               
 	                else {
 	            
-	                    sendMessage($chatId,"Hola ".$basicName.", veo que eres nuevo, se te han aÃ±adido: 600 fichas.");
+	                    sendMessage($chatId,"Hola ".$basicName.", veo que eres nuevo, se te han añadido: 600 fichas.");
 	            
 	                 }
 	        
@@ -151,7 +159,7 @@
 	    
 	        if (isset($userName)) {
 	            
-	            sendMessage($chatId,"Hola @".$userName.", veo que eres nuevo, se te han aÃ±adido: 600 fichas.");
+	            sendMessage($chatId,"Hola @".$userName.", veo que eres nuevo, se te han añadido: 600 fichas.");
 	            
 	            funcRuleta($chatId,$message,$userId,$conn,$cantidad,$userName,$basicName);
 	            
@@ -159,7 +167,7 @@
 	        
 	        else {
 	            
-	            sendMessage($chatId,"Hola ".$basicName.", veo que eres nuevo, se te han aÃ±adido: 600 fichas.");
+	            sendMessage($chatId,"Hola ".$basicName.", veo que eres nuevo, se te han añadido: 600 fichas.");
 	            
 	            funcRuleta($chatId, $message, $userId, $conn, $cantidad, $userName, $basicName);
 	            
@@ -195,7 +203,7 @@
 	    
 	        if (isset($userName)) {
 	            
-	            sendMessage($chatId,"Hola @".$userName.", veo que eres nuevo, se te han aÃ±adido: 600 fichas.");
+	            sendMessage($chatId,"Hola @".$userName.", veo que eres nuevo, se te han añadido: 600 fichas.");
 	            
 	            funcRuleta($chatId, $message, $userId, $conn, $cantidad, $userName, $basicName);
 	            
@@ -203,7 +211,7 @@
 	        
 	        else {
 	            
-	            sendMessage($chatId,"Hola ".$basicName.", veo que eres nuevo, se te han aÃ±adido: 600 fichas.");
+	            sendMessage($chatId,"Hola ".$basicName.", veo que eres nuevo, se te han añadido: 600 fichas.");
 	            
 	            funcRuleta($chatId, $message, $userId, $conn, $cantidad, $userName, $basicName);
 	            
@@ -238,7 +246,7 @@
 	    
 	        if (isset($userName)) {
 	            
-	            sendMessage($chatId,"Hola @".$userName.", veo que eres nuevo, se te han aÃ±adido: 600 fichas.");
+	            sendMessage($chatId,"Hola @".$userName.", veo que eres nuevo, se te han añadido: 600 fichas.");
 	            
 	            funcRuleta($chatId, $message, $userId, $conn, $cantidad, $userName, $basicName);
 	            
@@ -246,7 +254,7 @@
 	        
 	        else {
 	            
-	            sendMessage($chatId,"Hola ".$basicName.", veo que eres nuevo, se te han aÃ±adido: 600 fichas.");
+	            sendMessage($chatId,"Hola ".$basicName.", veo que eres nuevo, se te han añadido: 600 fichas.");
 	            
 	            funcRuleta($chatId, $message, $userId, $conn, $cantidad, $userName, $basicName);
 	            
