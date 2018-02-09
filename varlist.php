@@ -2,7 +2,7 @@
 
 //Almacenamos el token del bot (el DNI del bot)
 
-$bottoken = "456501628:AAFfwibamNRz29xANcXAGrNPwvf70kEtAU0";
+$bottoken = "";
 
 //Ahorramos escribir parte de la petición con esta variable, ya que todas las peticiones HTTPS empiezan así
 
