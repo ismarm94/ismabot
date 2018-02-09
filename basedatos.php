@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "id3241895_ismabot";
+$username = "";
 $password = "";
-$dbname = "id3241895_ismabot";
+$dbname = "";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
